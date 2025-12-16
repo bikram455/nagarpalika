@@ -18,4 +18,5 @@ def main_page():
 def getProvinceData():
     return dumps(provinces.find())
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
