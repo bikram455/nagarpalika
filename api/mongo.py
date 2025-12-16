@@ -1,6 +1,8 @@
+import os
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://bikramleeemboo_db_user:dS4HP0EviPPb4KmU@cluster0.2jvdqso.mongodb.net/?appName=Cluster0")
+mongo_url = os.getenv("MONGO_URL")
+client = MongoClient(mongo_url)
 db = client["sewa"]
 provinces = db["provinces"]
 users = db["users"]

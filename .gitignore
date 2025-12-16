@@ -1,3 +1,5 @@
 .env
 *.env
 /api/.env
+
+/api/__pycache__
