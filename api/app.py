@@ -1,7 +1,7 @@
 from flask import Flask
 from bson.json_util import dumps
 from users import usersBlueprint
-from mongo import provinces
+from mongo import provinces, mongo_url
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -16,6 +16,7 @@ def main_page():
 
 @app.route("/province-data")
 def getProvinceData():
+    print(mongo_url)
     return dumps(provinces.find())
 
 if __name__ == "__main__":
