@@ -16,7 +16,7 @@ def main_page():
 
 @app.route("/province-data")
 def getProvinceData():
-    print(mongo_url)
+    print(f'Hello World: {mongo_url}')
     return dumps(provinces.find())
 
 if __name__ == "__main__":
