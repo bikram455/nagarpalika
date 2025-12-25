@@ -1,7 +1,7 @@
 import hashlib
 from .mongo import users
 from flask import Blueprint, request
-from utils import send_otp, verify_otp
+from .utils import send_otp, verify_otp
 
 
 usersBlueprint = Blueprint('auth', __name__)
