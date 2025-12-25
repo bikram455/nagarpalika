@@ -1,7 +1,7 @@
 from flask import Flask
 from bson.json_util import dumps
-from users import usersBlueprint
-from mongo import provinces, mongo_url
+from .users import usersBlueprint
+from .mongo import provinces, mongo_url
 from dotenv import load_dotenv
 
 load_dotenv()
